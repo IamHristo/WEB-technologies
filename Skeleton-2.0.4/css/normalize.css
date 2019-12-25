@@ -425,6 +425,7 @@ td,
 th {
   padding: 0;
 }
+<<<<<<< HEAD
 footer{
 
   position: relative;
@@ -460,4 +461,15 @@ footer{
 /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
 .sticky + .content {
   padding-top: 60px;
+}
+
+#Logo-text {
+  padding-top: 3%;
+}
+
+.Tittle {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  font-style: normal;
+  text-align: center;
 }
