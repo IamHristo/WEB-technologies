@@ -425,3 +425,14 @@ td,
 th {
   padding: 0;
 }
+
+#Logo-text {
+  padding-top: 3%;
+}
+
+.Tittle {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  font-style: normal;
+  text-align: center;
+}
