@@ -43,8 +43,7 @@
 			<a class="site-logo" href="index.html">
 				<img src="img/logo1.png" alt="">
 			</a>
-			<div class="user-panel">
-				<a href="#">Вход</a>  /  <a href="#">Регистрация</a>
+			<div class="user-panel" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Вход</a>  /  <a href="#">Регистрация</a>
 			</div>
 			<!-- responsive -->
 			<div class="nav-switch">
@@ -409,6 +408,48 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
 </div> 
 
+     <div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="index.html" >
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close1" title="Close">&times;</span>
+      <img src="img/logo1.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b class="login">Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b class="login">Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <label class="login">
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container">
+      
+      <span  class="psw login">Create <a href="#">account?</a></span>
+        
+        <span  class="psw login">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+    </div> 
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+    
     <!--=========== TEST =======-->
     
     <!-- scripts -->
