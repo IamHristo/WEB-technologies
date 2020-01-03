@@ -1679,13 +1679,15 @@ button:hover {
 }
 
 #testcolor{
-    color: white;
+    color: red;
 }
 
 #no {
     background-color: red;
 }
-
+.modal .psw a{
+    color: #E98101;
+}
 .review-text:first-child{
     
 }
