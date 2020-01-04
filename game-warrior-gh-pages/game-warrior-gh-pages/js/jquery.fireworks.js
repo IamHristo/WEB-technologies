@@ -274,3 +274,8 @@ canvas.addEventListener( 'mouseup', function( e ) {
 // once the window loads, we are ready for some fireworks!
 window.onload = loop;
 
+window.setTimeout(function() {
+    $(".alert").fadeTo(1000, 0).slideUp(1000, function(){
+        $(this).remove(); 
+    });
+}, 2000);	

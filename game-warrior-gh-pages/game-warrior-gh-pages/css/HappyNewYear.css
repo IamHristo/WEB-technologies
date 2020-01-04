@@ -207,3 +207,9 @@ button:hover::after, button:focus::after {
     top: 0;
     background-color: transparent;
 }
+.alert{
+    width: 30%;
+    float: right;
+    background-color: transparent;
+    z-index: 15;
+}

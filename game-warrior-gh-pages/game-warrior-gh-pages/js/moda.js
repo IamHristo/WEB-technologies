@@ -34,9 +34,51 @@ function showReg(){
     reg.style.display = "block";
 }
 
+function showRegHide(){
+    var reg = document.getElementById("regform");
+    reg.style.display = "none";
+}
+
 function pswForget(){
     var modal = document.getElementById("id01");
     var reg = document.getElementById("pswforget");
     modal.style.display = "none";
     reg.style.display = "block";
+}
+
+function pswForgetHide(){
+    var reg = document.getElementById("pswforget");
+    reg.style.display = "none";
+}
+
+function showAlert(){
+    
+    var form = document.getElementById("login-form");
+
+function myFunction() {
+  if (form.checkValidity()) {
+    var modal = document.getElementById("id01");
+    $('.alert').show();
+    setTimeout(function(){ $(".alert").fadeTo(1000, 0.4).slideUp(800); }, 3000);
+    $(modal).fadeTo(1000, 0);
+  }
+}
+    
+    
+    
+}
+
+function showLogin(){
+    var modal = document.getElementById('id01');
+    modal.style.display='block';
+    modal.style.opacity='100';
+}
+
+function showLoginHide(){
+    var modal = document.getElementById('id01');
+    
+    var modal = document.getElementById("id01");
+    $('.alert').show();
+    setTimeout(function(){ $(".alert").fadeTo(1000, 0.4).slideUp(800); }, 3000);
+    $(modal).fadeTo(1000, 0);
 }

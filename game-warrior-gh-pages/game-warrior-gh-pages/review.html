@@ -35,6 +35,13 @@
      <!-- particles.js container -->
 <div id="particles-js">
     
+    <div class="container">
+    <div class="alert alert-success" role="alert">
+  <strong>Влязохте успешно!</strong>
+  
+</div>
+    </div>
+    
 	<!-- Header section -->
 	<header class="header-section">
 		<div class="container">
@@ -42,7 +49,7 @@
 			<a class="site-logo" href="index.html">
 				<img src="img/logo1.png" alt="">
 			</a>
-			<div class="user-panel" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Вход</a>  /  <a href="#">Регистрация</a>
+			<div class="user-panel" onclick="showLogin()" style="width:auto;">Вход</a>  /  <a href="#">Регистрация</a>
 			</div>
 			<!-- responsive -->
 			<div class="nav-switch">
@@ -440,8 +447,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
     <!-- Modal -->
 <div id="id01" class="modal">
-  
- 	<form class="modal-content animate" action="index.html" >
+ 	<form class="modal-content animate"  id="login-form" action="javascript:;" onsubmit="showLoginHide()">
     	<div class="imgcontainer">
       		<span onclick="document.getElementById('id01').style.display='none'" class="close1" title="Close">&times;</span>
       		<img src="img/logo1.png" alt="Avatar" class="avatar">
@@ -451,18 +457,68 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
       		<label for="uname"><b class="login">Потребителско име</b></label>
       		<input type="text" placeholder="Въведете потребителско име" name="uname" required>
       		<label for="psw"><b class="login">Парола</b></label>
-      		<input type="password" placeholder="Въведете парола" name="psw" required>
-      		<button type="submit">Вход</button>
+      		<input type="password" placeholder="Въведете парола" name="psw" autocomplete="new-password" required>
+      		<button onclick="showAlert()" type="submit" >Вход</button>
       		<label class="login">
         	<input type="checkbox" checked="checked" name="remember"> Запомни ме
       		</label>
     	</div>
     	<div class="container">
-      		<span  class="psw login" id="login"><a href="#">Регистрация</a></span>
-        	<span  class="psw login"><a href="#">Забравена парола</a></span>
+      		<span  class="psw login"><a onclick="showReg()" href="#">Регистрация</a></span>
+        	<span  class="psw login"><a onclick="pswForget()" href="#">Забравена парола</a></span>
     	</div>
   	</form>
 </div>
+   
+    <div id="regform" class="modal">
+<form class="modal-content animate" action="index.html" >
+ 	<div class="imgcontainer">
+      	<span onclick="document.getElementById('regform').style.display='none'" class="close1" title="Close">&times;</span>
+      	<img src="img/logo1.png" alt="Avatar" class="avatar">
+    </div>
+    	<div class="container">
+      		<label for="uname"><b class="login">Потребителско име</b></label>
+      		<input type="text" placeholder="Въведете потребителско име" name="uname" required>
+            <label for="email"><b class="login">Имейл адрес</b></label>
+      		<input type="text" placeholder="Въведете валиден имейл адрес" name="email" required>
+      		<label for="psw"><b class="login">Парола</b></label>
+      		<input type="password" placeholder="Въведете парола" name="psw"  autocomplete="new-password" required>
+            <label for="pswr"><b class="login">Повторете паролата</b></label>
+      		<input type="password" placeholder="Въведете парола" name="pswr" autocomplete="new-password" required>
+      		<button type="submit">Регистрация</button>
+            <button onclick="showRegHide()" id="no" type="button" formnovalidate>Отказ</button>
+    	</div>
+</form>
+</div> 
+    
+        <div id="pswforget" class="modal">
+<form class="modal-content animate" action="index.html" >
+ 	<div class="imgcontainer">
+      	<span onclick="document.getElementById('pswforget').style.display='none'" class="close1" title="Close">&times;</span>
+      	<img src="img/logo1.png" alt="Avatar" class="avatar">
+    </div>
+    	<div class="container">
+            <label for="email"><b class="login">Имейл адрес на който да изпратим новата Ви парола</b></label>
+      		<input type="text" placeholder="Въведете валиден имейл адрес" name="email" required>
+      		<button type="submit">Изпрати</button>
+            <button onclick="pswForgetHide()" id="no" type="button" formnovalidate>Отказ</button>
+            <p style="text-align: center">Ако не получите имейл от нас до 5 минути проверете <i>SPAM</i> папката или се свържете с нас!</p>
+    	</div>
+</form>
+</div> 
+    
+   
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
     </div> 
 <!-- End Modal -->
 <script src="js/moda.js"></script>
@@ -485,5 +541,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<script src="js/owl.carousel.min.js"></script>
 	<script src="js/jquery.marquee.min.js"></script>
 	<script src="js/main.js"></script>
+    <script src="js/moda.js"></script>
     </body>
 </html>

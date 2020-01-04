@@ -1597,7 +1597,7 @@ span.psw {
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 2; /* Sit on top */
+  z-index: 25; /* Sit on top */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -1736,3 +1736,13 @@ button:hover {
 .more{
     display: none;
 }
+.alert{
+    display: none;
+    position: absolute;
+    z-index: 55;
+    top: 110px;
+    right: 0;
+    margin: 10px;
+}
+
+
