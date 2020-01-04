@@ -26,3 +26,17 @@ function showMore() {
     btnText.innerHTML = "Покажи още"; 
     }
 }
+
+function showReg(){
+    var modal = document.getElementById("id01");
+    var reg = document.getElementById("regform");
+    modal.style.display = "none";
+    reg.style.display = "block";
+}
+
+function pswForget(){
+    var modal = document.getElementById("id01");
+    var reg = document.getElementById("pswforget");
+    modal.style.display = "none";
+    reg.style.display = "block";
+}
