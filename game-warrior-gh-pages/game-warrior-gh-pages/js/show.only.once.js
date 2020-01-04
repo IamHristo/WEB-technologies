@@ -57,11 +57,11 @@ function clickCounter() {
 function Test(){
          
          
-             if (localStorage.clickcount) {
-      localStorage.clickcount = "seen";
+             if (localStorage.isSeen) {
+      localStorage.isSeen = "seen";
         
     } else {
-      localStorage.clickcount = "not";
+      localStorage.isSeen = "not";
         document.getElementById('id011').style.display='block';
     }
          }
