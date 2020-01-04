@@ -408,19 +408,9 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
   	</form>
 </div>
     </div> 
-<script>
-// Get the modal
-var modal = document.getElementById('id01');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-</script>
+<script src="js/moda.js"></script>
     
-    <!--=========== TEST =======-->
+<!--=========== TEST =======-->
     
     <!-- scripts -->
 <script src="../particles.js"></script>
@@ -428,25 +418,7 @@ window.onclick = function(event) {
 
 <!-- stats.js -->
 <script src="js/lib/stats.js"></script>
-<script>
-  var count_particles, stats, update;
-  stats = new Stats;
-  stats.setMode(0);
-  stats.domElement.style.position = 'absolute';
-  stats.domElement.style.left = '0px';
-  stats.domElement.style.top = '0px';
-  document.body.appendChild(stats.domElement);
-  count_particles = document.querySelector('.js-count-particles');
-  update = function() {
-    stats.begin();
-    stats.end();
-    if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-      count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
-    }
-    requestAnimationFrame(update);
-  };
-  requestAnimationFrame(update);
-</script>
+
     
 <!--=========== TEST =======-->
     
